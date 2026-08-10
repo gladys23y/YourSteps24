@@ -1,0 +1,803 @@
+/* =========================================================
+   YOURSTEPS | GALERÍA
+   Estilo: Cool / Urbano / Moderno / Premium
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* TURQUESA */
+    --turquoise: #00A896;
+    --turquoise-dark: #007F73;
+
+    /* AZUL */
+    --blue: #3B82A0;
+    --blue-dark: #28657F;
+
+    /* MORADO */
+    --purple: #7167A8;
+    --purple-dark: #574E8B;
+
+    /* NEGRO */
+    --black: #111827;
+    --black-soft: #1F2937;
+
+    /* FONDOS */
+    --background: #F3F7F6;
+    --paper: #FFFFFF;
+
+    /* TEXTO */
+    --muted: #667085;
+
+    /* LÍNEAS */
+    --line: rgba(17,24,39,.08);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background:
+
+        radial-gradient(
+            circle at 8% 10%,
+            rgba(0,168,150,.08),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 92% 18%,
+            rgba(113,103,168,.08),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(59,130,160,.06),
+            transparent 30%
+        ),
+
+        var(--background);
+
+    color:
+        var(--black);
+
+    min-height:
+        100vh;
+}
+
+
+h1,
+h3 {
+
+    font-family:
+        'Archivo Black',
+        'Poppins',
+        sans-serif;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.contenido {
+
+    width:
+        90%;
+
+    max-width:
+        1400px;
+
+    margin:
+        auto;
+
+    padding:
+        30px;
+}
+
+
+/* =========================================================
+   BOTÓN VOLVER
+   ========================================================= */
+
+.volver {
+
+    text-decoration:
+        none;
+
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-bottom:
+        30px;
+
+    padding:
+        9px 16px;
+
+    background:
+        rgba(255,255,255,.7);
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:
+        50px;
+
+    transition:
+        .3s ease;
+}
+
+
+.volver:hover {
+
+    color:
+        var(--turquoise-dark);
+
+    background:
+        var(--paper);
+
+    transform:
+        translateX(-4px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(17,24,39,.07);
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.encabezado {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        55px;
+}
+
+
+/* =========================================================
+   TITULO
+   ========================================================= */
+
+.encabezado h1 {
+
+    font-size:
+        clamp(38px, 5vw, 52px);
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -2px;
+
+    margin-bottom:
+        20px;
+
+    color:
+        var(--black);
+}
+
+
+/* =========================================================
+   TITULO DEGRADADO
+   ========================================================= */
+
+.encabezado h1 span {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--turquoise-dark),
+            var(--turquoise),
+            var(--blue),
+            var(--purple)
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+}
+
+
+/* =========================================================
+   TEXTO ENCABEZADO
+   ========================================================= */
+
+.encabezado p {
+
+    max-width:
+        650px;
+
+    margin:
+        auto;
+
+    font-size:
+        17px;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--muted);
+}
+
+
+/* =========================================================
+   GALERÍA
+   ========================================================= */
+
+.galeria {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        30px;
+
+    position:
+        relative;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.imagen {
+
+    position:
+        relative;
+
+    background:
+        rgba(255,255,255,.92);
+
+    padding:
+        18px;
+
+    border-radius:
+        22px;
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-top:
+        4px solid
+        var(--turquoise);
+
+    box-shadow:
+
+        0 12px 30px
+        rgba(17,24,39,.07);
+
+    transition:
+        .4s ease;
+
+    overflow:
+        hidden;
+}
+
+
+/* =========================================================
+   BRILLO DE LA TARJETA
+   ========================================================= */
+
+.imagen::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    top:
+        -80px;
+
+    right:
+        -70px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(0,168,150,.07);
+
+    transition:
+        .4s ease;
+}
+
+
+.imagen:hover::before {
+
+    transform:
+        scale(1.6);
+}
+
+
+/* =========================================================
+   COLORES DE LAS TARJETAS
+   ========================================================= */
+
+
+/* Primera */
+
+.imagen:nth-child(3n+1) {
+
+    border-top-color:
+        var(--turquoise);
+}
+
+
+.imagen:nth-child(3n+1)::before {
+
+    background:
+        rgba(0,168,150,.08);
+}
+
+
+/* Segunda */
+
+.imagen:nth-child(3n+2) {
+
+    border-top-color:
+        var(--blue);
+}
+
+
+.imagen:nth-child(3n+2)::before {
+
+    background:
+        rgba(59,130,160,.08);
+}
+
+
+/* Tercera */
+
+.imagen:nth-child(3n) {
+
+    border-top-color:
+        var(--purple);
+}
+
+
+.imagen:nth-child(3n)::before {
+
+    background:
+        rgba(113,103,168,.08);
+}
+
+
+/* =========================================================
+   HOVER TARJETAS
+   ========================================================= */
+
+.imagen:hover {
+
+    transform:
+        translateY(-9px);
+
+    box-shadow:
+
+        0 22px 45px
+        rgba(17,24,39,.12);
+}
+
+
+/* =========================================================
+   IMÁGENES
+   ========================================================= */
+
+.imagen img {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    width:
+        100%;
+
+    height:
+        260px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        16px;
+
+    display:
+        block;
+
+    transition:
+        .5s ease;
+
+    filter:
+        saturate(.92);
+}
+
+
+/* =========================================================
+   HOVER IMAGEN
+   ========================================================= */
+
+.imagen:hover img {
+
+    transform:
+        scale(1.035);
+
+    filter:
+        saturate(1.05);
+}
+
+
+/* =========================================================
+   TITULO DE IMAGEN
+   ========================================================= */
+
+.imagen h3 {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin-top:
+        17px;
+
+    font-size:
+        20px;
+
+    letter-spacing:
+        -.3px;
+}
+
+
+/* =========================================================
+   COLORES TITULOS
+   ========================================================= */
+
+.imagen:nth-child(3n+1) h3 {
+
+    color:
+        var(--turquoise-dark);
+}
+
+
+.imagen:nth-child(3n+2) h3 {
+
+    color:
+        var(--blue-dark);
+}
+
+
+.imagen:nth-child(3n) h3 {
+
+    color:
+        var(--purple-dark);
+}
+
+
+/* =========================================================
+   PEQUEÑA LÍNEA DECORATIVA
+   ========================================================= */
+
+.imagen h3::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        28px;
+
+    height:
+        2px;
+
+    margin:
+        9px auto 0;
+
+    border-radius:
+        10px;
+
+    background:
+        currentColor;
+
+    opacity:
+        .45;
+
+    transition:
+        .3s ease;
+}
+
+
+.imagen:hover h3::after {
+
+    width:
+        55px;
+
+    opacity:
+        .8;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    text-align:
+        center;
+
+    margin-top:
+        65px;
+
+    padding:
+        28px;
+
+    font-size:
+        13px;
+
+    color:
+        var(--muted);
+
+    border-top:
+        1px solid
+        var(--line);
+
+    background:
+        rgba(255,255,255,.45);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width: 1100px) {
+
+    .galeria {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            25px;
+    }
+
+
+    .imagen img {
+
+        height:
+            240px;
+    }
+}
+
+
+/* =========================================================
+   TABLET PEQUEÑA
+   ========================================================= */
+
+@media(max-width: 900px) {
+
+    .contenido {
+
+        width:
+            92%;
+
+        padding:
+            25px 15px;
+    }
+
+
+    .encabezado {
+
+        margin-bottom:
+            40px;
+    }
+
+
+    .encabezado h1 {
+
+        font-size:
+            38px;
+    }
+
+
+    .encabezado p {
+
+        font-size:
+            15px;
+    }
+
+
+    .galeria {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            600px;
+
+        margin:
+            auto;
+    }
+
+
+    .imagen img {
+
+        height:
+            300px;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media(max-width: 600px) {
+
+    .contenido {
+
+        width:
+            94%;
+
+        padding:
+            20px 10px;
+    }
+
+
+    .volver {
+
+        font-size:
+            13px;
+
+        margin-bottom:
+            25px;
+    }
+
+
+    .encabezado {
+
+        margin-bottom:
+            35px;
+    }
+
+
+    .encabezado h1 {
+
+        font-size:
+            32px;
+
+        letter-spacing:
+            -1px;
+    }
+
+
+    .encabezado p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.7;
+    }
+
+
+    .galeria {
+
+        gap:
+            20px;
+    }
+
+
+    .imagen {
+
+        padding:
+            14px;
+
+        border-radius:
+            19px;
+    }
+
+
+    .imagen img {
+
+        height:
+            240px;
+
+        border-radius:
+            13px;
+    }
+
+
+    .imagen h3 {
+
+        font-size:
+            18px;
+    }
+
+
+    footer {
+
+        margin-top:
+            40px;
+
+        padding:
+            22px 12px;
+
+        font-size:
+            12px;
+    }
+}

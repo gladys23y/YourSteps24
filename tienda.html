@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YourSteps | Catálogo</title>
+
+    <link rel="stylesheet" href="css/tienda.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="shop-header">
+
+        <div class="logo">
+            Your<span>Steps</span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="btn-regresar">
+                ← Regresar
+            </a>
+
+            <a href="#" onclick="filtrarCategoria('Mujer')">
+                Mujer
+            </a>
+
+            <a href="#" onclick="filtrarCategoria('Hombre')">
+                Hombre
+            </a>
+
+            <a href="#" onclick="filtrarCategoria('Niños')">
+                Niños
+            </a>
+
+            <a href="../../backend/logout.php" class="btn-logout">
+                Cerrar sesión
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero-shop">
+
+        <div class="hero-text">
+
+            <span class="small-title">
+                NUEVA COLECCIÓN
+            </span>
+
+            <h1>
+                Camina con<br>
+                <span>tu propio estilo.</span>
+            </h1>
+
+            <p>
+                Descubre zapatos diseñados para acompañarte
+                en cada paso.
+            </p>
+
+            <button onclick="window.scrollTo({top: 500, behavior: 'smooth'})">
+                Explorar colección
+            </button>
+
+        </div>
+
+       <div class="hero-decoration">
+    <img src="../backend/uploads/categorias/tines11.png" alt="Tenis YourSteps">
+</div>
+
+    </section>
+
+
+    <!-- ================= CONTENIDO ================= -->
+
+    <main class="shop-content">
+
+        <!-- Bienvenida -->
+
+        <div class="welcome-user">
+            <span>¡Hola!</span>
+            <h3 id="saludo-cliente"></h3>
+        </div>
+
+
+        <!-- Título -->
+
+        <div class="header-section">
+
+            <div>
+
+                <span class="section-label">
+                    YOURSTEPS
+                </span>
+
+                <h2 id="titulo-categoria">
+                    MÁS VENDIDOS
+                </h2>
+
+                <p>
+                    Descubre nuestra última colección de temporada.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+
+
+        <!-- Productos -->
+
+        <div class="product-grid" id="product-grid">
+
+            <p class="loading">
+                Cargando colección...
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="shop-footer">
+
+        <div class="footer-logo">
+            Your<span>Steps</span>
+        </div>
+
+        <p>
+            Tu estilo comienza con cada paso.
+        </p>
+
+        <span class="copyright">
+            © 2026 YourSteps · Todos los derechos reservados
+        </span>
+
+    </footer>
+
+
+    <script src="js/tienda.js"></script>
+
+</body>
+
+</html>
+```

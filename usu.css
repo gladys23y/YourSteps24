@@ -1,0 +1,857 @@
+/* =========================================================
+   YOURSTEPS | TABLA
+   Paleta marítima + gris frío + índigo + caoba
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* PALETA PRINCIPAL */
+    --gray-light: #F2F0EF;
+    --gray: #BBBDBC;
+
+    --blue: #245F73;
+    --blue-dark: #183B47;
+
+    --mahogany: #733E24;
+    --mahogany-dark: #5A2F1C;
+
+    /* COLORES COMPLEMENTARIOS */
+    --paper: #FFFFFF;
+
+    --ink: #1C2529;
+
+    --muted: #687377;
+
+    --line: rgba(36,95,115,.12);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(36,95,115,.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(115,62,36,.07),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #F2F0EF,
+            #F7F6F5,
+            #E9EEF0
+        );
+
+    min-height:
+        100vh;
+
+    color:
+        var(--ink);
+}
+
+
+/* =========================================================
+   TITULOS
+   ========================================================= */
+
+h1 {
+
+    font-family:
+        'Archivo Black',
+        'Poppins',
+        sans-serif;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+.contenido {
+
+    width:
+        92%;
+
+    max-width:
+        1450px;
+
+    margin:
+        40px auto;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border-radius:
+        30px;
+
+    padding:
+        35px;
+
+    border:
+        1px solid
+        rgba(36,95,115,.08);
+
+    box-shadow:
+
+        0 20px 50px
+        rgba(24,59,71,.10);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+/* =========================================================
+   DECORACIÓN SUPERIOR
+   ========================================================= */
+
+.contenido::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        220px;
+
+    height:
+        220px;
+
+    top:
+        -130px;
+
+    right:
+        -80px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(36,95,115,.06);
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   SEGUNDA DECORACIÓN
+   ========================================================= */
+
+.contenido::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        160px;
+
+    height:
+        160px;
+
+    bottom:
+        -100px;
+
+    left:
+        -60px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(115,62,36,.05);
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   BOTÓN VOLVER
+   ========================================================= */
+
+.volver {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    text-decoration:
+        none;
+
+    color:
+        var(--blue);
+
+    font-weight:
+        600;
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        25px;
+
+    padding:
+        9px 16px;
+
+    background:
+        rgba(242,240,239,.75);
+
+    border:
+        1px solid
+        rgba(36,95,115,.10);
+
+    border-radius:
+        50px;
+
+    transition:
+        .3s ease;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+.volver:hover {
+
+    color:
+        white;
+
+    background:
+        var(--blue);
+
+    transform:
+        translateX(-5px);
+
+    box-shadow:
+
+        0 8px 20px
+        rgba(36,95,115,.18);
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.titulo {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        40px;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+/* =========================================================
+   TITULO PRINCIPAL
+   ========================================================= */
+
+.titulo h1 {
+
+    font-size:
+        clamp(38px, 5vw, 48px);
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -1.5px;
+
+    color:
+        var(--ink);
+}
+
+
+/* =========================================================
+   TEXTO DESTACADO
+   ========================================================= */
+
+.titulo span {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--blue),
+            #347F96,
+            var(--mahogany)
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+   ========================================================= */
+
+.titulo p {
+
+    color:
+        var(--muted);
+
+    margin-top:
+        12px;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   TABLA
+   ========================================================= */
+
+.tabla {
+
+    background:
+        var(--paper);
+
+    border-radius:
+        24px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        var(--line);
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(24,59,71,.07);
+
+    transition:
+        .35s ease;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+/* =========================================================
+   HOVER TABLA
+   ========================================================= */
+
+.tabla:hover {
+
+    box-shadow:
+
+        0 22px 48px
+        rgba(36,95,115,.13);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+table {
+
+    width:
+        100%;
+
+    border-collapse:
+        collapse;
+}
+
+
+/* =========================================================
+   ENCABEZADOS
+   ========================================================= */
+
+thead {
+
+    background:
+
+        linear-gradient(
+            100deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+}
+
+
+thead th {
+
+    color:
+        white;
+
+    padding:
+        20px;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        .8px;
+
+    text-transform:
+        uppercase;
+
+    font-weight:
+        600;
+
+    white-space:
+        nowrap;
+}
+
+
+/* =========================================================
+   PEQUEÑO DETALLE EN ENCABEZADOS
+   ========================================================= */
+
+thead th:first-child {
+
+    border-left:
+        4px solid
+        var(--mahogany);
+}
+
+
+/* =========================================================
+   FILAS
+   ========================================================= */
+
+tbody tr {
+
+    transition:
+        .3s ease;
+
+    background:
+        white;
+}
+
+
+/* =========================================================
+   FILAS PARES
+   ========================================================= */
+
+tbody tr:nth-child(even) {
+
+    background:
+        #F2F0EF;
+}
+
+
+/* =========================================================
+   HOVER FILA
+   ========================================================= */
+
+tbody tr:hover {
+
+    background:
+        rgba(36,95,115,.07);
+
+    transform:
+        scale(1.005);
+}
+
+
+/* =========================================================
+   CELDAS
+   ========================================================= */
+
+tbody td {
+
+    padding:
+        18px;
+
+    text-align:
+        center;
+
+    font-size:
+        15px;
+
+    color:
+        var(--ink);
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+/* =========================================================
+   ÚLTIMA FILA
+   ========================================================= */
+
+tbody tr:last-child td {
+
+    border-bottom:
+        none;
+}
+
+
+/* =========================================================
+   PRIMERA COLUMNA
+   ========================================================= */
+
+tbody td:first-child {
+
+    font-weight:
+        600;
+
+    color:
+        var(--blue-dark);
+}
+
+
+/* =========================================================
+   EFECTO CAOBA
+   ========================================================= */
+
+/*
+   Si tienes elementos destacados dentro
+   de la tabla, puedes usar la clase .destacado
+*/
+
+.destacado {
+
+    color:
+        var(--mahogany);
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   BADGE AZUL
+   ========================================================= */
+
+.badge-blue {
+
+    display:
+        inline-block;
+
+    padding:
+        5px 12px;
+
+    border-radius:
+        50px;
+
+    background:
+        rgba(36,95,115,.10);
+
+    color:
+        var(--blue-dark);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   BADGE CAOBA
+   ========================================================= */
+
+.badge-mahogany {
+
+    display:
+        inline-block;
+
+    padding:
+        5px 12px;
+
+    border-radius:
+        50px;
+
+    background:
+        rgba(115,62,36,.10);
+
+    color:
+        var(--mahogany);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    text-align:
+        center;
+
+    margin-top:
+        40px;
+
+    padding:
+        25px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+
+    border-top:
+        1px solid
+        var(--line);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width: 1000px) {
+
+    .contenido {
+
+        width:
+            94%;
+
+        padding:
+            28px;
+    }
+
+
+    .titulo h1 {
+
+        font-size:
+            40px;
+    }
+
+
+    thead th {
+
+        padding:
+            17px 14px;
+    }
+
+
+    tbody td {
+
+        padding:
+            16px 14px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width: 900px) {
+
+    .contenido {
+
+        margin:
+            25px auto;
+
+        padding:
+            22px;
+
+        border-radius:
+            24px;
+    }
+
+
+    .titulo {
+
+        margin-bottom:
+            30px;
+    }
+
+
+    .titulo h1 {
+
+        font-size:
+            34px;
+    }
+
+
+    .titulo p {
+
+        font-size:
+            15px;
+    }
+
+
+    .tabla {
+
+        overflow-x:
+            auto;
+
+        border-radius:
+            18px;
+    }
+
+
+    table {
+
+        min-width:
+            750px;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media(max-width: 600px) {
+
+    .contenido {
+
+        width:
+            95%;
+
+        margin:
+            18px auto;
+
+        padding:
+            18px;
+
+        border-radius:
+            20px;
+    }
+
+
+    .volver {
+
+        font-size:
+            13px;
+
+        margin-bottom:
+            22px;
+    }
+
+
+    .titulo h1 {
+
+        font-size:
+            30px;
+
+        letter-spacing:
+            -.8px;
+    }
+
+
+    .titulo p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.6;
+    }
+
+
+    thead th {
+
+        padding:
+            15px 12px;
+
+        font-size:
+            12px;
+    }
+
+
+    tbody td {
+
+        padding:
+            14px 12px;
+
+        font-size:
+            14px;
+    }
+
+
+    footer {
+
+        margin-top:
+            30px;
+
+        padding:
+            20px 10px;
+
+        font-size:
+            12px;
+    }
+}

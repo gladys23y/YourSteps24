@@ -16,22 +16,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Leaflet -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 </head>
 
@@ -132,22 +124,13 @@
 
                     <i class="fa-solid fa-location-crosshairs"></i>
 
-                    <input
-                        type="text"
-                        id="lugar"
-                        placeholder="Escribe una dirección o lugar..."
-                        autocomplete="off"
-                    >
+                    <input type="text" id="lugar" placeholder="Escribe una dirección o lugar..." autocomplete="off">
 
                 </div>
 
 
 
-                <button
-                    type="button"
-                    id="btnBuscar"
-                    onclick="buscarLugar()"
-                >
+                <button type="button" id="btnBuscar" onclick="buscarLugar()">
 
                     <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -163,11 +146,9 @@
 
         </section>
 
-
-
         <!-- =================================================
-             MAPA
-        ================================================== -->
+     MAPA
+================================================== -->
 
         <section class="mapa-card">
 
@@ -190,10 +171,6 @@
                 </div>
 
 
-
-                
-
-
             </div>
 
 
@@ -202,7 +179,29 @@
             <div id="mapa"></div>
 
 
+            <!-- Botón de sucursales -->
+
+            <div class="sucursales-container">
+
+                <a href="sucursales.html" class="boton-sucursales">
+
+                    <i class="fa-solid fa-store"></i>
+
+                    <span>
+                        Ver nuestras sucursales
+                    </span>
+
+                </a>
+
+            </div>
+
+
         </section>
+
+
+
+
+
 
 
 
@@ -210,10 +209,7 @@
              RESULTADO
         ================================================== -->
 
-        <section
-            class="resultado"
-            id="resultado"
-        >
+        <section class="resultado" id="resultado">
 
 
             <!-- Icono -->
@@ -255,10 +251,7 @@
 
         <div class="regresar-container">
 
-            <a
-                href="dashboard.html"
-                class="btn-regresar"
-            >
+            <a href="dashboard.html" class="btn-regresar">
 
                 <i class="fa-solid fa-arrow-left"></i>
 
@@ -279,8 +272,7 @@
          LEAFLET JS
     ====================================================== -->
 
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
     </script>
 
 

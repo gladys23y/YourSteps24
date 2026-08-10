@@ -897,3 +897,36 @@ body {
             13px 18px;
     }
 }
+
+.sucursales-container {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+
+.boton-sucursales {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 24px;
+
+    background: #315a73;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+.boton-sucursales:hover {
+    background: #6194a1;
+    transform: translateY(-2px);
+}

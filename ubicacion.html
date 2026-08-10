@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ubicación | YourSteps</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/ubicacion.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PÁGINA DE UBICACIÓN
+    ====================================================== -->
+
+    <main class="ubicacion-page">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="ubicacion-header">
+
+
+            <!-- Icono -->
+
+            <div class="header-icon">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+            </div>
+
+
+            <!-- Información -->
+
+            <div>
+
+                <span class="section-label">
+                    YOURSTEPS
+                </span>
+
+                <h1>
+                    Encuentra nuestra ubicación
+                </h1>
+
+                <p>
+                    Busca un lugar y encuentra la ruta para llegar
+                    fácilmente a nuestra tienda.
+                </p>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             BUSCADOR
+        ================================================== -->
+
+        <section class="busqueda-card">
+
+
+            <!-- Título -->
+
+            <div class="busqueda-title">
+
+
+                <div class="search-icon">
+
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        ¿Cómo llegar?
+                    </h2>
+
+                    <p>
+                        Introduce tu ubicación para encontrar
+                        la mejor ruta.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Buscador -->
+
+            <div class="busqueda">
+
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-location-crosshairs"></i>
+
+                    <input
+                        type="text"
+                        id="lugar"
+                        placeholder="Escribe una dirección o lugar..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    id="btnBuscar"
+                    onclick="buscarLugar()"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <span>
+                        Buscar
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             MAPA
+        ================================================== -->
+
+        <section class="mapa-card">
+
+
+            <!-- Encabezado del mapa -->
+
+            <div class="mapa-header">
+
+
+                <div>
+
+                    <span>
+                        UBICACIÓN
+                    </span>
+
+                    <h2>
+                        Nuestra tienda
+                    </h2>
+
+                </div>
+
+
+
+                
+
+
+            </div>
+
+
+            <!-- Mapa -->
+
+            <div id="mapa"></div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULTADO
+        ================================================== -->
+
+        <section
+            class="resultado"
+            id="resultado"
+        >
+
+
+            <!-- Icono -->
+
+            <div class="resultado-icon">
+
+                <i class="fa-solid fa-route"></i>
+
+            </div>
+
+
+            <!-- Información -->
+
+            <div class="resultado-info">
+
+                <span>
+                    RUTA
+                </span>
+
+                <h3>
+                    Encuentra el camino
+                </h3>
+
+                <p>
+                    Busca un lugar para comenzar y aquí aparecerá
+                    la información de tu ubicación.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOTÓN REGRESAR
+        ================================================== -->
+
+        <div class="regresar-container">
+
+            <a
+                href="dashboard.html"
+                class="btn-regresar"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                <span>
+                    Regresar al inicio
+                </span>
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         LEAFLET JS
+    ====================================================== -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+
+
+    <!-- =====================================================
+         YOURSTEPS JS
+    ====================================================== -->
+
+    <script src="js/ubicacion.js"></script>
+
+
+</body>
+
+</html>

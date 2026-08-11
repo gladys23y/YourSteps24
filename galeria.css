@@ -1,233 +1,195 @@
 /* =========================================================
    YOURSTEPS | GALERÍA
-   Estilo: Cool / Urbano / Moderno / Premium
+   Estilo: Moderno / Limpio / Profesional
    ========================================================= */
 
 
-/* =========================================================
+/* =========================
    VARIABLES
-   ========================================================= */
+========================= */
 
 :root {
 
-    /* TURQUESA */
     --turquoise: #00A896;
     --turquoise-dark: #007F73;
 
-    /* AZUL */
     --blue: #3B82A0;
     --blue-dark: #28657F;
 
-    /* MORADO */
     --purple: #7167A8;
     --purple-dark: #574E8B;
 
-    /* NEGRO */
     --black: #111827;
     --black-soft: #1F2937;
 
-    /* FONDOS */
     --background: #F3F7F6;
     --paper: #FFFFFF;
 
-    /* TEXTO */
     --muted: #667085;
 
-    /* LÍNEAS */
-    --line: rgba(17,24,39,.08);
+    --line: rgba(17, 24, 39, 0.08);
+
+    --shadow:
+        0 12px 30px rgba(17, 24, 39, 0.07);
 }
 
 
-/* =========================================================
+/* =========================
    RESET
-   ========================================================= */
+========================= */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 
-    font-family:
-        'Poppins',
-        sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
 html {
-
     scroll-behavior: smooth;
 }
 
 
 body {
 
+    min-height: 100vh;
+
     background:
 
         radial-gradient(
             circle at 8% 10%,
-            rgba(0,168,150,.08),
+            rgba(0, 168, 150, 0.08),
             transparent 28%
         ),
 
         radial-gradient(
             circle at 92% 18%,
-            rgba(113,103,168,.08),
+            rgba(113, 103, 168, 0.08),
             transparent 28%
-        ),
-
-        radial-gradient(
-            circle at 50% 100%,
-            rgba(59,130,160,.06),
-            transparent 30%
         ),
 
         var(--background);
 
-    color:
-        var(--black);
-
-    min-height:
-        100vh;
+    color: var(--black);
 }
 
 
-h1,
-h3 {
-
-    font-family:
-        'Archivo Black',
-        'Poppins',
-        sans-serif;
-}
-
-
-/* =========================================================
+/* =========================
    CONTENIDO
-   ========================================================= */
+========================= */
 
 .contenido {
 
-    width:
-        90%;
+    width: 90%;
 
-    max-width:
-        1400px;
+    max-width: 1250px;
 
-    margin:
-        auto;
+    margin: 0 auto;
 
-    padding:
-        30px;
+    padding: 30px 0;
 }
 
 
-/* =========================================================
-   BOTÓN VOLVER
-   ========================================================= */
+/* =========================
+   VOLVER
+========================= */
 
 .volver {
 
-    text-decoration:
-        none;
+    display: inline-flex;
 
-    color:
-        var(--muted);
+    align-items: center;
 
-    font-size:
-        14px;
+    gap: 7px;
 
-    font-weight:
-        600;
+    margin-bottom: 50px;
 
-    display:
-        inline-flex;
+    padding: 9px 16px;
 
-    align-items:
-        center;
+    color: var(--muted);
 
-    gap:
-        7px;
+    background: rgba(255, 255, 255, 0.75);
 
-    margin-bottom:
-        30px;
+    border: 1px solid var(--line);
 
-    padding:
-        9px 16px;
+    border-radius: 50px;
 
-    background:
-        rgba(255,255,255,.7);
+    text-decoration: none;
 
-    border:
-        1px solid
-        var(--line);
+    font-size: 13px;
 
-    border-radius:
-        50px;
+    font-weight: 600;
 
-    transition:
-        .3s ease;
+    transition: 0.3s ease;
 }
 
 
 .volver:hover {
 
-    color:
-        var(--turquoise-dark);
+    color: var(--turquoise-dark);
 
-    background:
-        var(--paper);
+    background: var(--paper);
 
-    transform:
-        translateX(-4px);
+    transform: translateX(-4px);
 
     box-shadow:
-        0 8px 20px
-        rgba(17,24,39,.07);
+        0 8px 20px rgba(17, 24, 39, 0.07);
 }
 
 
-/* =========================================================
+/* =========================
    ENCABEZADO
-   ========================================================= */
+========================= */
 
 .encabezado {
 
-    text-align:
-        center;
+    max-width: 720px;
 
-    margin-bottom:
-        55px;
+    margin: 0 auto 60px;
+
+    text-align: center;
 }
 
 
-/* =========================================================
-   TITULO
-   ========================================================= */
+/* PEQUEÑO TEXTO */
+
+.subtitulo {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--turquoise-dark);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* TÍTULO */
 
 .encabezado h1 {
 
-    font-size:
-        clamp(38px, 5vw, 52px);
+    margin-bottom: 18px;
 
-    line-height:
-        1.15;
+    color: var(--black);
 
-    letter-spacing:
-        -2px;
+    font-size: clamp(38px, 5vw, 55px);
 
-    margin-bottom:
-        20px;
+    line-height: 1.1;
 
-    color:
-        var(--black);
+    letter-spacing: -2px;
+
+    font-weight: 700;
 }
 
 
-/* =========================================================
-   TITULO DEGRADADO
-   ========================================================= */
+/* COLOR YOURSTEPS */
 
 .encabezado h1 span {
 
@@ -241,563 +203,588 @@ h3 {
             var(--purple)
         );
 
-    -webkit-background-clip:
-        text;
+    -webkit-background-clip: text;
 
-    background-clip:
-        text;
+    background-clip: text;
 
-    color:
-        transparent;
+    color: transparent;
 }
 
 
-/* =========================================================
-   TEXTO ENCABEZADO
-   ========================================================= */
+/* DESCRIPCIÓN */
 
 .encabezado p {
 
-    max-width:
-        650px;
+    max-width: 650px;
 
-    margin:
-        auto;
+    margin: 0 auto;
 
-    font-size:
-        17px;
+    color: var(--muted);
 
-    line-height:
-        1.8;
+    font-size: 15px;
 
-    color:
-        var(--muted);
+    line-height: 1.8;
 }
 
 
-/* =========================================================
+/* =========================
    GALERÍA
-   ========================================================= */
+========================= */
 
 .galeria {
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap:
-        30px;
+    gap: 28px;
 
-    position:
-        relative;
+    margin-bottom: 75px;
 }
 
 
-/* =========================================================
-   TARJETAS
-   ========================================================= */
+/* =========================
+   TARJETA
+========================= */
 
 .imagen {
 
-    position:
-        relative;
+    overflow: hidden;
 
-    background:
-        rgba(255,255,255,.92);
+    background: rgba(255, 255, 255, 0.95);
 
-    padding:
-        18px;
+    border: 1px solid var(--line);
 
-    border-radius:
-        22px;
+    border-radius: 20px;
 
-    text-align:
-        center;
-
-    border:
-        1px solid
-        var(--line);
-
-    border-top:
-        4px solid
-        var(--turquoise);
-
-    box-shadow:
-
-        0 12px 30px
-        rgba(17,24,39,.07);
+    box-shadow: var(--shadow);
 
     transition:
-        .4s ease;
-
-    overflow:
-        hidden;
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-
-/* =========================================================
-   BRILLO DE LA TARJETA
-   ========================================================= */
-
-.imagen::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    width:
-        150px;
-
-    height:
-        150px;
-
-    top:
-        -80px;
-
-    right:
-        -70px;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(0,168,150,.07);
-
-    transition:
-        .4s ease;
-}
-
-
-.imagen:hover::before {
-
-    transform:
-        scale(1.6);
-}
-
-
-/* =========================================================
-   COLORES DE LAS TARJETAS
-   ========================================================= */
-
-
-/* Primera */
-
-.imagen:nth-child(3n+1) {
-
-    border-top-color:
-        var(--turquoise);
-}
-
-
-.imagen:nth-child(3n+1)::before {
-
-    background:
-        rgba(0,168,150,.08);
-}
-
-
-/* Segunda */
-
-.imagen:nth-child(3n+2) {
-
-    border-top-color:
-        var(--blue);
-}
-
-
-.imagen:nth-child(3n+2)::before {
-
-    background:
-        rgba(59,130,160,.08);
-}
-
-
-/* Tercera */
-
-.imagen:nth-child(3n) {
-
-    border-top-color:
-        var(--purple);
-}
-
-
-.imagen:nth-child(3n)::before {
-
-    background:
-        rgba(113,103,168,.08);
-}
-
-
-/* =========================================================
-   HOVER TARJETAS
-   ========================================================= */
 
 .imagen:hover {
 
-    transform:
-        translateY(-9px);
+    transform: translateY(-8px);
 
     box-shadow:
-
-        0 22px 45px
-        rgba(17,24,39,.12);
+        0 20px 45px rgba(17, 24, 39, 0.12);
 }
 
 
-/* =========================================================
-   IMÁGENES
-   ========================================================= */
+/* =========================
+   CONTENEDOR DE IMAGEN
+========================= */
 
-.imagen img {
+.imagen-contenedor {
 
-    position:
-        relative;
+    position: relative;
 
-    z-index:
-        1;
+    width: 100%;
 
-    width:
-        100%;
+    height: 270px;
 
-    height:
-        260px;
+    overflow: hidden;
 
-    object-fit:
-        cover;
-
-    border-radius:
-        16px;
-
-    display:
-        block;
-
-    transition:
-        .5s ease;
-
-    filter:
-        saturate(.92);
+    background: #e8eeee;
 }
 
 
-/* =========================================================
-   HOVER IMAGEN
-   ========================================================= */
+/* LIGERO DEGRADADO */
 
-.imagen:hover img {
+.imagen-contenedor::after {
 
-    transform:
-        scale(1.035);
+    content: "";
 
-    filter:
-        saturate(1.05);
-}
+    position: absolute;
 
-
-/* =========================================================
-   TITULO DE IMAGEN
-   ========================================================= */
-
-.imagen h3 {
-
-    position:
-        relative;
-
-    z-index:
-        2;
-
-    margin-top:
-        17px;
-
-    font-size:
-        20px;
-
-    letter-spacing:
-        -.3px;
-}
-
-
-/* =========================================================
-   COLORES TITULOS
-   ========================================================= */
-
-.imagen:nth-child(3n+1) h3 {
-
-    color:
-        var(--turquoise-dark);
-}
-
-
-.imagen:nth-child(3n+2) h3 {
-
-    color:
-        var(--blue-dark);
-}
-
-
-.imagen:nth-child(3n) h3 {
-
-    color:
-        var(--purple-dark);
-}
-
-
-/* =========================================================
-   PEQUEÑA LÍNEA DECORATIVA
-   ========================================================= */
-
-.imagen h3::after {
-
-    content:
-        "";
-
-    display:
-        block;
-
-    width:
-        28px;
-
-    height:
-        2px;
-
-    margin:
-        9px auto 0;
-
-    border-radius:
-        10px;
+    inset: 0;
 
     background:
-        currentColor;
+        linear-gradient(
+            to top,
+            rgba(17, 24, 39, 0.16),
+            transparent 50%
+        );
 
-    opacity:
-        .45;
+    pointer-events: none;
+}
+
+
+/* =========================
+   IMAGEN
+========================= */
+
+.imagen-contenedor img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
 
     transition:
-        .3s ease;
+        transform 0.5s ease,
+        filter 0.5s ease;
+
+    filter: saturate(0.92);
 }
 
 
-.imagen:hover h3::after {
+.imagen:hover .imagen-contenedor img {
 
-    width:
-        55px;
+    transform: scale(1.06);
 
-    opacity:
-        .8;
+    filter: saturate(1.05);
 }
 
 
-/* =========================================================
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.imagen-info {
+
+    padding: 21px 22px 24px;
+}
+
+
+/* CATEGORÍA */
+
+.imagen-info span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--turquoise-dark);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* TÍTULO */
+
+.imagen-info h3 {
+
+    color: var(--black);
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* COLORES DIFERENTES */
+
+.imagen:nth-child(3n + 2)
+.imagen-info span {
+
+    color: var(--blue-dark);
+}
+
+
+.imagen:nth-child(3n)
+.imagen-info span {
+
+    color: var(--purple-dark);
+}
+
+
+/* =========================
+   LÍNEA DECORATIVA
+========================= */
+
+.imagen-info h3::after {
+
+    content: "";
+
+    display: block;
+
+    width: 28px;
+
+    height: 2px;
+
+    margin-top: 9px;
+
+    background: currentColor;
+
+    border-radius: 10px;
+
+    opacity: 0.45;
+
+    transition: 0.3s ease;
+}
+
+
+.imagen:hover
+.imagen-info h3::after {
+
+    width: 55px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   INVITACIÓN
+========================= */
+
+.invitacion {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 75px;
+
+    padding: 48px 55px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--black),
+            var(--black-soft)
+        );
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(17, 24, 39, 0.15);
+}
+
+
+/* TEXTO PEQUEÑO */
+
+.invitacion span {
+
+    color: #5EEAD4;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* TÍTULO */
+
+.invitacion h2 {
+
+    margin: 8px 0;
+
+    color: white;
+
+    font-size: 28px;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.invitacion p {
+
+    color: #CBD5E1;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.btn {
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 13px 25px;
+
+    background: var(--turquoise);
+
+    color: var(--black);
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+
+    background: white;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
    FOOTER
-   ========================================================= */
+========================= */
 
 footer {
 
-    text-align:
-        center;
+    padding: 28px 10px;
 
-    margin-top:
-        65px;
+    border-top: 1px solid var(--line);
 
-    padding:
-        28px;
+    background: rgba(255, 255, 255, 0.45);
 
-    font-size:
-        13px;
-
-    color:
-        var(--muted);
-
-    border-top:
-        1px solid
-        var(--line);
-
-    background:
-        rgba(255,255,255,.45);
+    text-align: center;
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* LOGO */
 
-@media(max-width: 1100px) {
+.footer-logo {
+
+    margin-bottom: 7px;
+
+    color: var(--black);
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.footer-logo span {
+
+    color: var(--turquoise-dark);
+}
+
+
+/* TEXTO */
+
+footer p {
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
 
     .galeria {
 
         grid-template-columns:
             repeat(2, 1fr);
 
-        gap:
-            25px;
+        gap: 25px;
     }
 
 
-    .imagen img {
+    .imagen-contenedor {
 
-        height:
-            240px;
+        height: 250px;
     }
+
 }
 
 
-/* =========================================================
+/* =========================
    TABLET PEQUEÑA
-   ========================================================= */
+========================= */
 
-@media(max-width: 900px) {
+@media (max-width: 800px) {
 
     .contenido {
 
-        width:
-            92%;
-
-        padding:
-            25px 15px;
+        width: 92%;
     }
 
 
     .encabezado {
 
-        margin-bottom:
-            40px;
-    }
-
-
-    .encabezado h1 {
-
-        font-size:
-            38px;
-    }
-
-
-    .encabezado p {
-
-        font-size:
-            15px;
+        margin-bottom: 45px;
     }
 
 
     .galeria {
 
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
-        max-width:
-            600px;
+        max-width: 600px;
 
-        margin:
-            auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
-    .imagen img {
+    .imagen-contenedor {
 
-        height:
-            300px;
+        height: 300px;
     }
+
+
+    .invitacion {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 40px 30px;
+    }
+
+
+    .invitacion .btn {
+
+        width: 100%;
+    }
+
 }
 
 
-/* =========================================================
+/* =========================
    MÓVIL
-   ========================================================= */
+========================= */
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
 
     .contenido {
 
-        width:
-            94%;
+        width: 94%;
 
-        padding:
-            20px 10px;
+        padding: 20px 0;
     }
 
 
     .volver {
 
-        font-size:
-            13px;
+        margin-bottom: 35px;
 
-        margin-bottom:
-            25px;
+        font-size: 12px;
     }
 
 
     .encabezado {
 
-        margin-bottom:
-            35px;
+        margin-bottom: 35px;
     }
 
 
     .encabezado h1 {
 
-        font-size:
-            32px;
+        font-size: 34px;
 
-        letter-spacing:
-            -1px;
+        letter-spacing: -1px;
     }
 
 
     .encabezado p {
 
-        font-size:
-            14px;
+        font-size: 13px;
 
-        line-height:
-            1.7;
+        line-height: 1.7;
     }
 
 
     .galeria {
 
-        gap:
-            20px;
+        gap: 20px;
+
+        margin-bottom: 50px;
     }
 
 
     .imagen {
 
-        padding:
-            14px;
-
-        border-radius:
-            19px;
+        border-radius: 17px;
     }
 
 
-    .imagen img {
+    .imagen-contenedor {
 
-        height:
-            240px;
-
-        border-radius:
-            13px;
+        height: 240px;
     }
 
 
-    .imagen h3 {
+    .imagen-info {
 
-        font-size:
-            18px;
+        padding: 18px 19px 21px;
+    }
+
+
+    .imagen-info h3 {
+
+        font-size: 17px;
+    }
+
+
+    .invitacion {
+
+        margin-bottom: 50px;
+
+        padding: 35px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .invitacion h2 {
+
+        font-size: 23px;
+    }
+
+
+    .invitacion p {
+
+        font-size: 12px;
     }
 
 
     footer {
 
-        margin-top:
-            40px;
-
-        padding:
-            22px 12px;
-
-        font-size:
-            12px;
+        padding: 22px 10px;
     }
+
+
+    footer p {
+
+        font-size: 10px;
+    }
+
 }

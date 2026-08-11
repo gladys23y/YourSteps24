@@ -20,25 +20,20 @@
 ========================================================= */
 
 body {
+    font-family: 'Poppins', sans-serif;
 
-    font-family:
-        'Poppins',
-        sans-serif;
-
-    min-height:
-        100vh;
+    min-height: 100vh;
 
     background:
-
         radial-gradient(
             circle at 10% 10%,
-            rgba(125,181,175,.06),
+            rgba(125, 181, 175, 0.06),
             transparent 25%
         ),
 
         radial-gradient(
             circle at 90% 20%,
-            rgba(113,136,152,.08),
+            rgba(113, 136, 152, 0.08),
             transparent 30%
         ),
 
@@ -49,25 +44,19 @@ body {
             #F5F7F8
         );
 
-    color:
-        #263943;
+    color: #263943;
 }
 
 
 /* =========================================================
-   CONTENEDOR
+   CONTENEDOR PRINCIPAL
 ========================================================= */
 
 .ubicacion-page {
+    width: 90%;
+    max-width: 1100px;
 
-    width:
-        90%;
-
-    max-width:
-        1100px;
-
-    margin:
-        40px auto;
+    margin: 40px auto;
 }
 
 
@@ -76,34 +65,76 @@ body {
 ========================================================= */
 
 .ubicacion-header {
+    text-align: center;
 
-    text-align:
-        center;
-
-    margin-bottom:
-        25px;
-
-    padding:
-        25px 20px;
+    margin-bottom: 25px;
+    padding: 25px 20px;
 
     background:
-
         linear-gradient(
             135deg,
             #FFFFFF,
             #EEF2F4
         );
 
-    border:
-        1px solid
-        rgba(38,57,67,.08);
+    border: 1px solid rgba(38, 57, 67, 0.08);
 
-    border-radius:
-        18px;
+    border-radius: 18px;
 
     box-shadow:
-        0 10px 25px
-        rgba(38,57,67,.07);
+        0 10px 25px rgba(38, 57, 67, 0.07);
+}
+
+
+/* =========================================================
+   ICONO DEL HEADER
+========================================================= */
+
+.header-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5A9690,
+            #718898
+        );
+
+    box-shadow:
+        0 7px 18px rgba(38, 57, 67, 0.15);
+}
+
+.header-icon i {
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   ETIQUETA HEADER
+========================================================= */
+
+.section-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #5C8C88;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
 }
 
 
@@ -112,21 +143,14 @@ body {
 ========================================================= */
 
 .ubicacion-header h1 {
+    color: #3D515C;
 
-    color:
-        #3D515C;
+    font-size: 32px;
+    font-weight: 800;
 
-    font-size:
-        32px;
+    margin-bottom: 10px;
 
-    font-weight:
-        800;
-
-    margin-bottom:
-        10px;
-
-    letter-spacing:
-        -1px;
+    letter-spacing: -1px;
 }
 
 
@@ -135,27 +159,18 @@ body {
 ========================================================= */
 
 .ubicacion-header h1::after {
+    content: "";
 
-    content:
-        "";
+    display: block;
 
-    display:
-        block;
+    width: 55px;
+    height: 3px;
 
-    width:
-        55px;
+    margin: 10px auto 0;
 
-    height:
-        3px;
-
-    margin:
-        10px auto 0;
-
-    border-radius:
-        10px;
+    border-radius: 10px;
 
     background:
-
         linear-gradient(
             90deg,
             #718898,
@@ -165,19 +180,100 @@ body {
 
 
 /* =========================================================
-   DESCRIPCIÓN
+   DESCRIPCIÓN HEADER
 ========================================================= */
 
 .ubicacion-header p {
+    color: #74818A;
 
-    color:
-        #74818A;
+    font-size: 14px;
 
-    font-size:
-        14px;
+    margin-top: 12px;
 
-    margin-top:
-        12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TARJETA DE BÚSQUEDA
+========================================================= */
+
+.busqueda-card {
+    margin-bottom: 25px;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #F1F4F5
+        );
+
+    border: 1px solid rgba(38, 57, 67, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(38, 57, 67, 0.07);
+}
+
+
+/* =========================================================
+   TÍTULO DE BÚSQUEDA
+========================================================= */
+
+.busqueda-title {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+.search-icon {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5A9690,
+            #718898
+        );
+
+    box-shadow:
+        0 7px 16px rgba(38, 57, 67, 0.14);
+}
+
+.search-icon i {
+    font-size: 18px;
+}
+
+.busqueda-title h2 {
+    color: #3D515C;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+.busqueda-title p {
+    color: #74818A;
+
+    font-size: 12px;
 }
 
 
@@ -186,32 +282,46 @@ body {
 ========================================================= */
 
 .busqueda {
+    display: flex;
 
-    display:
-        flex;
+    gap: 10px;
 
-    gap:
-        10px;
+    padding: 12px;
 
-    margin-bottom:
-        20px;
+    background: rgba(255, 255, 255, 0.75);
 
-    padding:
-        12px;
+    border: 1px solid rgba(38, 57, 67, 0.08);
 
-    background:
-        rgba(255,255,255,.75);
-
-    border:
-        1px solid
-        rgba(38,57,67,.08);
-
-    border-radius:
-        15px;
+    border-radius: 15px;
 
     box-shadow:
-        0 8px 20px
-        rgba(38,57,67,.06);
+        0 8px 20px rgba(38, 57, 67, 0.06);
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+    position: relative;
+
+    flex: 1;
+}
+
+.input-wrapper i {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #718898;
+
+    font-size: 14px;
+
+    pointer-events: none;
 }
 
 
@@ -220,55 +330,38 @@ body {
 ========================================================= */
 
 .busqueda input {
+    width: 100%;
 
-    flex:
-        1;
+    padding: 14px 14px 14px 40px;
 
-    padding:
-        14px;
+    border: 2px solid #D5DEE3;
 
-    border:
-        2px solid
-        #D5DEE3;
+    border-radius: 10px;
 
-    border-radius:
-        10px;
+    background: #F9FAFB;
 
-    background:
-        #F9FAFB;
+    color: #263943;
 
-    color:
-        #263943;
+    font-family: 'Poppins', sans-serif;
 
-    font-size:
-        15px;
+    font-size: 14px;
 
-    outline:
-        none;
+    outline: none;
 
-    transition:
-        .3s ease;
+    transition: 0.3s ease;
 }
-
 
 .busqueda input::placeholder {
-
-    color:
-        #9AA7AE;
+    color: #9AA7AE;
 }
 
-
 .busqueda input:focus {
+    border-color: #718898;
 
-    border-color:
-        #718898;
-
-    background:
-        white;
+    background: #FFFFFF;
 
     box-shadow:
-        0 0 0 3px
-        rgba(113,136,152,.10);
+        0 0 0 3px rgba(113, 136, 152, 0.10);
 }
 
 
@@ -277,52 +370,46 @@ body {
 ========================================================= */
 
 .busqueda button {
+    display: inline-flex;
 
-    padding:
-        14px 25px;
+    align-items: center;
+    justify-content: center;
 
-    border:
-        none;
+    gap: 8px;
 
-    border-radius:
-        10px;
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 10px;
 
     background:
-
         linear-gradient(
             135deg,
             #435C6B,
             #61788A
         );
 
-    color:
-        white;
+    color: #FFFFFF;
 
-    font-size:
-        15px;
+    font-family: 'Poppins', sans-serif;
 
-    font-weight:
-        600;
+    font-size: 14px;
 
-    cursor:
-        pointer;
+    font-weight: 600;
 
-    transition:
-        .3s ease;
+    cursor: pointer;
+
+    transition: 0.3s ease;
 
     box-shadow:
-        0 7px 16px
-        rgba(38,57,67,.16);
+        0 7px 16px rgba(38, 57, 67, 0.16);
 }
 
-
 .busqueda button:hover {
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
     background:
-
         linear-gradient(
             135deg,
             #4F817D,
@@ -330,8 +417,70 @@ body {
         );
 
     box-shadow:
-        0 10px 22px
-        rgba(76,130,126,.22);
+        0 10px 22px rgba(76, 130, 126, 0.22);
+}
+
+.busqueda button:disabled {
+    cursor: wait;
+
+    opacity: 0.8;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   TARJETA DEL MAPA
+========================================================= */
+
+.mapa-card {
+    overflow: hidden;
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(38, 57, 67, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(38, 57, 67, 0.08);
+}
+
+
+/* =========================================================
+   HEADER DEL MAPA
+========================================================= */
+
+.mapa-header {
+    padding: 20px 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #F1F4F5
+        );
+
+    border-bottom: 1px solid #E3E9EC;
+}
+
+.mapa-header span {
+    color: #5C8C88;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.mapa-header h2 {
+    margin-top: 4px;
+
+    color: #3D515C;
+
+    font-size: 21px;
+
+    font-weight: 700;
 }
 
 
@@ -340,26 +489,80 @@ body {
 ========================================================= */
 
 #mapa {
+    width: 100%;
+    height: 500px;
 
-    width:
-        100%;
+    overflow: hidden;
 
-    height:
-        500px;
-
-    border-radius:
-        18px;
-
-    overflow:
-        hidden;
-
-    border:
-        1px solid
-        rgba(38,57,67,.10);
+    border: 1px solid rgba(38, 57, 67, 0.10);
 
     box-shadow:
-        0 12px 30px
-        rgba(38,57,67,.12);
+        0 12px 30px rgba(38, 57, 67, 0.12);
+}
+
+
+/* =========================================================
+   BOTÓN DE SUCURSALES
+========================================================= */
+
+.sucursales-container {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.boton-sucursales {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #315A73,
+            #4F817D
+        );
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    box-shadow:
+        0 7px 16px rgba(38, 57, 67, 0.15);
+}
+
+.boton-sucursales:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #6194A1,
+            #5A9690
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(38, 57, 67, 0.20);
 }
 
 
@@ -368,15 +571,17 @@ body {
 ========================================================= */
 
 .resultado {
+    display: flex;
 
-    margin-top:
-        20px;
+    align-items: center;
 
-    padding:
-        20px;
+    gap: 15px;
+
+    margin-top: 20px;
+
+    padding: 20px;
 
     background:
-
         linear-gradient(
             135deg,
             #FFFFFF,
@@ -384,169 +589,128 @@ body {
         );
 
     border:
-        1px solid
-        rgba(38,57,67,.08);
+        1px solid rgba(38, 57, 67, 0.08);
 
-    border-radius:
-        15px;
+    border-left: 4px solid #5A9690;
+
+    border-radius: 15px;
 
     box-shadow:
-        0 8px 20px
-        rgba(38,57,67,.07);
+        0 8px 20px rgba(38, 57, 67, 0.07);
 
-    transition:
-        .3s ease;
+    transition: 0.3s ease;
 }
-
 
 .resultado:hover {
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
     box-shadow:
-        0 12px 25px
-        rgba(38,57,67,.10);
+        0 12px 25px rgba(38, 57, 67, 0.10);
 }
 
 
 /* =========================================================
-   TÍTULO RESULTADO
+   ICONO RESULTADO
 ========================================================= */
 
-.resultado h3 {
+.resultado-icon {
+    width: 48px;
+    height: 48px;
 
-    color:
-        #4F817D;
+    min-width: 48px;
 
-    margin-bottom:
-        8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    font-size:
-        18px;
+    border-radius: 13px;
 
-    font-weight:
-        700;
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5A9690,
+            #718898
+        );
+
+    font-size: 18px;
 }
 
 
 /* =========================================================
-   TEXTO RESULTADO
+   INFORMACIÓN RESULTADO
 ========================================================= */
 
-.resultado p {
+.resultado-info {
+    flex: 1;
+}
 
-    color:
-        #5F6D75;
+.resultado-info span {
+    color: #5C8C88;
 
-    font-size:
-        14px;
+    font-size: 10px;
 
-    line-height:
-        1.6;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.resultado-info h3 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+    color: #4F817D;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.resultado-info p {
+    margin: 0;
+
+    color: #5F6D75;
+
+    font-size: 14px;
+
+    line-height: 1.6;
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   ESTADO BUSCANDO
 ========================================================= */
 
-@media (max-width: 600px) {
+.resultado.buscando {
+    border-left-color: #718898;
 
-    .ubicacion-page {
-
-        width:
-            95%;
-
-        margin:
-            25px auto;
-    }
-
-
-    .ubicacion-header {
-
-        padding:
-            20px 15px;
-    }
-
-
-    .ubicacion-header h1 {
-
-        font-size:
-            26px;
-    }
-
-
-    .ubicacion-header p {
-
-        font-size:
-            13px;
-    }
-
-
-    .busqueda {
-
-        flex-direction:
-            column;
-
-        padding:
-            10px;
-    }
-
-
-    .busqueda input {
-
-        width:
-            100%;
-
-        padding:
-            13px;
-    }
-
-
-    .busqueda button {
-
-        width:
-            100%;
-
-        padding:
-            13px;
-    }
-
-
-    #mapa {
-
-        height:
-            400px;
-
-        border-radius:
-            14px;
-    }
-
-
-    .resultado {
-
-        padding:
-            17px;
-    }
+    opacity: 0.9;
 }
+
+
 /* =========================================================
    MARCADORES PERSONALIZADOS DEL MAPA
 ========================================================= */
 
-/* Quitar el fondo por defecto de Leaflet */
 .yoursteps-marker,
 .search-marker {
     background: transparent;
+
     border: none;
 }
 
-/* Marcador de la tienda */
+
+/* =========================================================
+   MARCADOR YOURSTEPS
+========================================================= */
+
 .marker-yoursteps {
     width: 42px;
     height: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -564,8 +728,7 @@ body {
     border: 3px solid #FFFFFF;
 
     box-shadow:
-        0 8px 20px
-        rgba(38,57,67,.30);
+        0 8px 20px rgba(38, 57, 67, 0.30);
 }
 
 .marker-yoursteps i {
@@ -576,12 +739,17 @@ body {
     transform: rotate(45deg);
 }
 
-/* Marcador del lugar buscado */
+
+/* =========================================================
+   MARCADOR DE BÚSQUEDA
+========================================================= */
+
 .marker-search {
     width: 40px;
     height: 40px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -599,8 +767,7 @@ body {
     border: 3px solid #FFFFFF;
 
     box-shadow:
-        0 8px 20px
-        rgba(38,57,67,.25);
+        0 8px 20px rgba(38, 57, 67, 0.25);
 }
 
 .marker-search i {
@@ -619,11 +786,18 @@ body {
 .popup-yoursteps,
 .popup-busqueda {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     min-width: 190px;
 }
+
+
+/* =========================================================
+   ICONO POPUP
+========================================================= */
 
 .popup-icon {
     width: 38px;
@@ -632,6 +806,7 @@ body {
     min-width: 38px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -655,6 +830,11 @@ body {
             #61788A
         );
 }
+
+
+/* =========================================================
+   TEXTO POPUP
+========================================================= */
 
 .popup-yoursteps strong,
 .popup-busqueda strong {
@@ -682,30 +862,66 @@ body {
 
 
 /* =========================================================
-   RESULTADO DEL BUSCADOR
+   BOTÓN REGRESAR
 ========================================================= */
 
-.resultado {
+.regresar-container {
     display: flex;
-    align-items: center;
-    gap: 15px;
 
-    border-left: 4px solid #5A9690;
+    justify-content: center;
+
+    margin-top: 30px;
+
+    margin-bottom: 20px;
 }
 
-.resultado-icon {
-    width: 48px;
-    height: 48px;
+.btn-regresar {
+    display: inline-flex;
 
-    min-width: 48px;
-
-    display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 13px;
+    gap: 10px;
+
+    padding: 13px 24px;
+
+    text-decoration: none;
 
     color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #435C6B,
+            #5A9690
+        );
+
+    border-radius: 12px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 20px rgba(38, 57, 67, 0.16);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn-regresar i {
+    font-size: 13px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.btn-regresar:hover {
+    transform: translateY(-3px);
 
     background:
         linear-gradient(
@@ -714,63 +930,103 @@ body {
             #718898
         );
 
-    font-size: 18px;
+    box-shadow:
+        0 12px 25px rgba(38, 57, 67, 0.22);
 }
 
-.resultado-info {
-    flex: 1;
-}
-
-.resultado-info span {
-    color: #5C8C88;
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-}
-
-.resultado-info h3 {
-    margin-top: 4px;
-
-    margin-bottom: 4px;
-}
-
-.resultado-info p {
-    margin: 0;
-}
-
-
-/* Estado mientras busca */
-.resultado.buscando {
-    border-left-color: #718898;
-
-    opacity: .9;
+.btn-regresar:hover i {
+    transform: translateX(-4px);
 }
 
 
 /* =========================================================
-   BOTÓN BUSCAR DESHABILITADO
+   RESPONSIVE
 ========================================================= */
 
-.busqueda button:disabled {
-    cursor: wait;
+@media (max-width: 900px) {
 
-    opacity: .8;
+    .ubicacion-page {
+        width: 94%;
+    }
 
-    transform: none;
+    #mapa {
+        height: 450px;
+    }
 }
 
 
 /* =========================================================
-   RESPONSIVE PARA EL RESULTADO
+   RESPONSIVE MÓVIL
 ========================================================= */
 
 @media (max-width: 600px) {
 
+    .ubicacion-page {
+        width: 95%;
+
+        margin: 25px auto;
+    }
+
+    .ubicacion-header {
+        padding: 20px 15px;
+    }
+
+    .ubicacion-header h1 {
+        font-size: 26px;
+    }
+
+    .ubicacion-header p {
+        font-size: 13px;
+    }
+
+    .busqueda-card {
+        padding: 17px;
+    }
+
+    .busqueda-title {
+        align-items: flex-start;
+    }
+
+    .busqueda-title h2 {
+        font-size: 18px;
+    }
+
+    .busqueda-title p {
+        font-size: 11px;
+    }
+
+    .busqueda {
+        flex-direction: column;
+
+        padding: 10px;
+    }
+
+    .busqueda input {
+        width: 100%;
+
+        padding: 13px 13px 13px 38px;
+    }
+
+    .busqueda button {
+        width: 100%;
+
+        padding: 13px;
+    }
+
+    #mapa {
+        height: 400px;
+
+        border-radius: 14px;
+    }
+
+    .mapa-header {
+        padding: 17px;
+    }
+
     .resultado {
         align-items: flex-start;
+
+        padding: 17px;
     }
 
     .resultado-icon {
@@ -779,154 +1035,84 @@ body {
 
         min-width: 44px;
     }
-}
 
-/* =========================================================
-   BOTÓN REGRESAR
-========================================================= */
+    .resultado-info h3 {
+        font-size: 16px;
+    }
 
-.regresar-container {
+    .resultado-info p {
+        font-size: 12px;
+    }
 
-    display: flex;
+    .sucursales-container {
+        padding: 20px 15px;
+    }
 
-    justify-content: center;
+    .boton-sucursales {
+        width: 100%;
 
-    margin-top: 30px;
-}
+        max-width: 300px;
 
-
-.btn-regresar {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    padding: 13px 22px;
-
-    text-decoration: none;
-
-    color: white;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #142B3A,
-            #2F6178
-        );
-
-    border-radius: 50px;
-
-    font-family:
-        'Montserrat',
-        sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    box-shadow:
-        0 8px 20px
-        rgba(20,43,58,.18);
-
-    transition:
-        .3s ease;
-}
-
-
-.btn-regresar i {
-
-    font-size: 12px;
-
-    transition:
-        .3s ease;
-}
-
-
-.btn-regresar:hover {
-
-    transform:
-        translateY(-3px);
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #35A6A0,
-            #287D82
-        );
-
-    box-shadow:
-        0 12px 25px
-        rgba(53,166,160,.25);
-}
-
-
-.btn-regresar:hover i {
-
-    transform:
-        translateX(-4px);
-}
-
-
-/* =========================================================
-   REGRESAR EN CELULAR
-========================================================= */
-
-@media (max-width: 650px) {
+        font-size: 12px;
+    }
 
     .regresar-container {
+        margin-top: 25px;
 
-        margin-top:
-            25px;
+        margin-bottom: 15px;
     }
 
     .btn-regresar {
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 280px;
 
-        max-width:
-            280px;
+        padding: 13px 18px;
 
-        padding:
-            13px 18px;
+        font-size: 12px;
     }
 }
 
-.sucursales-container {
-    display: flex;
-    justify-content: center;
-    padding: 25px;
-}
 
+/* =========================================================
+   RESPONSIVE PEQUEÑO
+========================================================= */
 
-.boton-sucursales {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+@media (max-width: 400px) {
 
-    padding: 13px 24px;
+    .ubicacion-header h1 {
+        font-size: 23px;
+    }
 
-    background: #315a73;
-    color: white;
+    .header-icon {
+        width: 43px;
+        height: 43px;
+    }
 
-    text-decoration: none;
+    .busqueda-title {
+        gap: 10px;
+    }
 
-    border-radius: 10px;
+    .search-icon {
+        width: 40px;
+        height: 40px;
 
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+        min-width: 40px;
+    }
 
-    transition: all 0.3s ease;
-}
+    #mapa {
+        height: 350px;
+    }
 
+    .resultado {
+        gap: 10px;
+    }
 
-.boton-sucursales:hover {
-    background: #6194a1;
-    transform: translateY(-2px);
+    .resultado-info h3 {
+        font-size: 15px;
+    }
+
+    .resultado-info p {
+        font-size: 11px;
+    }
 }

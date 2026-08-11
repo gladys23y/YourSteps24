@@ -6,8 +6,10 @@ $response = @file_get_contents($url);
 
 $usuarios = [];
 
-if($response){
+if ($response !== false) {
+
     $usuarios = json_decode($response, true);
+
 }
 
 ?>
@@ -17,87 +19,135 @@ if($response){
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>YourSteps - Usuarios</title>
+    <title>YourSteps - Usuarios</title>
 
-<link rel="stylesheet" href="../../frontend/css/usu.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-rel="stylesheet">
+    <link rel="stylesheet" href="../../frontend/css/usu.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
+
 <body>
+
 
 <div class="contenido">
 
-<a href="../../frontend/dashboard.html" class="volver">
-    ← Volver al inicio
-</a>
-<section class="titulo">
 
-<h1>
-Usuarios de la
-<span>API</span>
-</h1>
+    <!-- BOTÓN VOLVER -->
 
-<p>
-</p>
-
-</section>
+    <a href="../../frontend/dashboard.html" class="volver">
+        ← Volver al inicio
+    </a>
 
 
-<div class="tabla">
 
-<table>
+    <!-- ENCABEZADO -->
 
-<thead>
+    <section class="titulo">
 
-<tr>
+        <span>
+            YOURSTEPS
+        </span>
 
-<th>Nombre</th>
-<th>Correo electrónico</th>
-<th>Ciudad</th>
-<th>Empresa</th>
+        <h1>
+            Usuarios de la
+            <span>API</span>
+        </h1>
 
-</tr>
+        <p>
+            Consulta la información de los usuarios obtenidos
+            mediante nuestra API.
+        </p>
 
-</thead>
+    </section>
 
-<tbody>
 
-<?php
 
-foreach($usuarios as $usuario){
+    <!-- TABLA DE USUARIOS -->
 
-?>
+    <div class="tabla">
 
-<tr>
+        <table>
 
-<td><?php echo $usuario['name']; ?></td>
+            <thead>
 
-<td><?php echo $usuario['email']; ?></td>
+                <tr>
 
-<td><?php echo $usuario['address']['city']; ?></td>
+                    <th>
+                        Nombre
+                    </th>
 
-<td><?php echo $usuario['company']['name']; ?></td>
+                    <th>
+                        Correo electrónico
+                    </th>
 
-</tr>
+                    <th>
+                        Ciudad
+                    </th>
 
-<?php
+                    <th>
+                        Empresa
+                    </th>
 
-}
+                </tr>
 
-?>
+            </thead>
 
-</tbody>
 
-</table>
+            <tbody>
+
+                <?php if (!empty($usuarios)): ?>
+
+                    <?php foreach ($usuarios as $usuario): ?>
+
+                        <tr>
+
+                            <td>
+                                <?php echo htmlspecialchars($usuario['name']); ?>
+                            </td>
+
+                            <td>
+                                <?php echo htmlspecialchars($usuario['email']); ?>
+                            </td>
+
+                            <td>
+                                <?php echo htmlspecialchars($usuario['address']['city']); ?>
+                            </td>
+
+                            <td>
+                                <?php echo htmlspecialchars($usuario['company']['name']); ?>
+                            </td>
+
+                        </tr>
+
+                    <?php endforeach; ?>
+
+                <?php else: ?>
+
+                    <tr>
+
+                        <td colspan="4" class="sin-usuarios">
+                            No se pudieron cargar los usuarios.
+                        </td>
+
+                    </tr>
+
+                <?php endif; ?>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
 
 </div>
 
-</div>
 
 </body>
 
